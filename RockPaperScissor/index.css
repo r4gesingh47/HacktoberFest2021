@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Forum',monospace;
+    margin:0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/*This is default properties*/
+h1,p{
+    color:#E5E5E5;
+    font-weight:bold;
+    font-size: 2vw;
+    line-height:3vw;
+}
+
+/*For the main section*/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Setting the title */
+.title{
+    margin: 2rem;
+    width:100%;    
+}
+.title h1{
+    width: auto;
+    text-align: center;
+}
+
+/*Scores*/
+.scores{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem;
+    justify-content: space-evenly;
+
+}
+.scores div{
+    display:flex;
+}
+
+/*RockpaperScissor buttons*/
+.icon{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin:3rem;
+}
+@media (max-width: 480px) {
+    .icon img {
+      width:30vw;
+    }
+  }
+.icon img{
+    mix-blend-mode: exclusion;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 0px 1px rgba(0, 0, 0, 0.25);;
+    -moz-box-shadow: inset 0px 4px 0px 1px rgba(0, 0, 0, 0.25);
+}
+.icon img:hover{
+    box-shadow:  1px 1px 34px 9px #8D8181;
+    -moz-box-shadow:  1px 1px 34px 9px #8D8181;
+}
+@keyframes press {
+    100%{
+        transform: scale(0.8);
+    }
+}
+.click-animation{
+    animation-name: press;
+    animation-duration: .3s;
+}
+
+/*Reset Button*/
+.button{
+    width: 100%;
+    text-align: center;
+    margin:2rem
+}
+.reset{
+    background:  #C4C4C4;
+    padding: 1.7rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size:2vw;
+}
